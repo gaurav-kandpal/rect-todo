@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matched snapshot 1`] = `
+<div
+  className="header"
+  data-testid="todoform"
+  id="myDIV"
+>
+  <h2>
+    My To Do List
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <input
+      type="submit"
+      value="Add ToDo"
+    />
+  </form>
+</div>
+`;
