@@ -12,12 +12,13 @@ const TodoList = (obj) => {
 		setTodos(obj.list)
 	},[obj.list])
 	return(
-	<div className="todo-list">
+	
+	<div className="todo-list" data-testid="todoList">
 		<NewForm addTodo={addTodo} />
-		<ul id="myUL">
+		<ul id="myUL" data-testid="todos-ul">
 		{
 			todos.map(todo =>{
-				return(<li className={todo.isComplete ? 'checked' : ''} key={todo.id}>{todo.title}   <button className="deleteBtn" onClick={() => {if(window.confirm('Are you sure to delete this todo ?')){obj.deleteTodo(todo.id)};}} type="button">Remove</button><button className={todo.isComplete ? 'hideBtn' : 'finishBtn'} onClick={() =>obj.updateTodo(todo.id)} type="button">Mark completed</button>  </li>)
+				return(<li className={todo.isComplete ? 'checked' : ''} key={todo.id}>{todo.title}   <button data-testid="todo-completed-button" className="deleteBtn" onClick={() => {if(window.confirm('Are you sure to delete this todo ?')){obj.deleteTodo(todo.id)};}} type="button">Remove</button><button className={todo.isComplete ? 'hideBtn' : 'finishBtn'} onClick={() =>obj.updateTodo(todo.id)} type="button">Mark completed</button>  </li>)
 			})
 		}	
 		</ul>			

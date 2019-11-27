@@ -1,12 +1,11 @@
-const initState = {
+/*const initState = {
 	tododata:[
 	{title:'First Task',id:1,isComplete:false},
-	{title:'Second Task',id:2,isComplete:true},
-	{title:'Third Task',id:3,isComplete:false}
+	{title:'Second Task',id:2,isComplete:true}
 	]
 }
-
-const rootReducer = (state = initState, action) => {
+*/
+const rootReducer = (state={}, action) => {
 	if(action.type === 'ADD_TODO')
 	{
 		return{
